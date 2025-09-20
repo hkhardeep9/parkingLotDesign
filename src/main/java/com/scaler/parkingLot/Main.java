@@ -3,6 +3,7 @@ package com.scaler.parkingLot;
 import com.scaler.parkingLot.controllers.TicketController;
 import com.scaler.parkingLot.dtos.CreateTicketRequestDto;
 import com.scaler.parkingLot.dtos.CreateTicketResponseDto;
+import com.scaler.parkingLot.exceptions.NoAvailableparkingSpotException;
 import com.scaler.parkingLot.models.ParkingLot;
 import com.scaler.parkingLot.repositories.ParkingLotRepository;
 import com.scaler.parkingLot.repositories.ParkingSpotRepository;
@@ -12,7 +13,7 @@ import com.scaler.parkingLot.strategies.RandomSpotAssignmentStrategy;
 import com.scaler.parkingLot.strategies.SpotAssignmentStrategy;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoAvailableparkingSpotException {
         ObjectRegistry objectRegistry  = new ObjectRegistry();
         objectRegistry.register( "parkingLotRepositorty",new ParkingLotRepository());
         objectRegistry.register( "parkingSpotRepository",new ParkingSpotRepository());
