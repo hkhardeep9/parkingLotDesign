@@ -1,6 +1,6 @@
 package com.scaler.parkingLot.models;
 
-public enum SoptStatus {
+public enum ParkingSpotStatus {
     FILLED,
     AVAILABLE,
     NOTAVAILABLE

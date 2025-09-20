@@ -2,17 +2,8 @@ package com.scaler.parkingLot.models;
 
 import java.util.List;
 
-public class ParkingFloor {
-    private int id;
+public class ParkingFloor extends BaseModel{
     private List<ParkingSpot> parkingSpots;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public List<ParkingSpot> getParkingSpots() {
         return parkingSpots;
@@ -22,8 +13,7 @@ public class ParkingFloor {
         this.parkingSpots = parkingSpots;
     }
 
-    public ParkingFloor(List<ParkingSpot> parkingSpots, int id) {
+    public ParkingFloor(List<ParkingSpot> parkingSpots) {
         this.parkingSpots = parkingSpots;
-        this.id = id;
     }
 }

@@ -2,19 +2,10 @@ package com.scaler.parkingLot.models;
 
 import java.util.List;
 
-public class ParkingSpot {
-    private int id;
+public class ParkingSpot extends BaseModel{
     private List<VehicleType> vehicleTypes;
-    private SoptStatus soptStatus;
+    private ParkingSpotStatus parkingSpotStatus;
     private String name;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public List<VehicleType> getVehicleTypes() {
         return vehicleTypes;
@@ -24,12 +15,12 @@ public class ParkingSpot {
         this.vehicleTypes = vehicleTypes;
     }
 
-    public SoptStatus getSoptStatus() {
-        return soptStatus;
+    public ParkingSpotStatus getSoptStatus() {
+        return parkingSpotStatus;
     }
 
-    public void setSoptStatus(SoptStatus soptStatus) {
-        this.soptStatus = soptStatus;
+    public void setSoptStatus(ParkingSpotStatus parkingSpotStatus) {
+        this.parkingSpotStatus = parkingSpotStatus;
     }
 
     public String getName() {
@@ -40,10 +31,9 @@ public class ParkingSpot {
         this.name = name;
     }
 
-    public ParkingSpot(int id, List<VehicleType> vehicleTypes, SoptStatus soptStatus, String name) {
-        this.id = id;
+    public ParkingSpot(List<VehicleType> vehicleTypes, ParkingSpotStatus parkingSpotStatus, String name) {
         this.vehicleTypes = vehicleTypes;
-        this.soptStatus = soptStatus;
+        this.parkingSpotStatus = parkingSpotStatus;
         this.name = name;
     }
 }

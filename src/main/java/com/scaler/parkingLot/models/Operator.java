@@ -1,20 +1,10 @@
 package com.scaler.parkingLot.models;
 
-public class Operator {
-    private int id;
+public class Operator extends BaseModel{
     private String name;
 
-    public Operator(int id, String name) {
-        this.id = id;
+    public Operator(String name) {
         this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {

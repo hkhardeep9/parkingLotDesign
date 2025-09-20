@@ -1,27 +1,23 @@
 package com.scaler.parkingLot.models;
 
-public class Ticket {
-    private int id;
+import java.util.Date;
+
+public class Ticket extends BaseModel{
+    private Date entryTime;
     private Vehicle vehicle;
     private Operator operator;
     private Gate gate;
     private ParkingSpot parkingSpot;
 
-    public Ticket(int id, Vehicle vehicle, Operator operator, Gate gate, ParkingSpot parkingSpot) {
-        this.id = id;
+    public Ticket(Vehicle vehicle, Operator operator, Gate gate, ParkingSpot parkingSpot, Date entryTime) {
         this.vehicle = vehicle;
         this.operator = operator;
         this.gate = gate;
         this.parkingSpot = parkingSpot;
+        this.entryTime = entryTime;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    public Ticket() {}
 
     public Vehicle getVehicle() {
         return vehicle;
@@ -53,5 +49,13 @@ public class Ticket {
 
     public void setParkingSpot(ParkingSpot parkingSpot) {
         this.parkingSpot = parkingSpot;
+    }
+
+    public Date getEntryTime() {
+        return entryTime;
+    }
+
+    public void setEntryTime(Date entryTime) {
+        this.entryTime = entryTime;
     }
 }

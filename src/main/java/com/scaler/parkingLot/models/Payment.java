@@ -1,27 +1,17 @@
 package com.scaler.parkingLot.models;
 
-public class Payment {
-    private int id;
+public class Payment extends BaseModel{
     private PaymentMode paymentMode;
     //Add payment provider
     private PaymentStatus paymentStatus;
     private long referenceId;
     private double amount;
 
-    public Payment(int id, PaymentMode paymentMode, PaymentStatus paymentStatus, long referenceId, double amount) {
-        this.id = id;
+    public Payment(PaymentMode paymentMode, PaymentStatus paymentStatus, long referenceId, double amount) {
         this.paymentMode = paymentMode;
         this.paymentStatus = paymentStatus;
         this.referenceId = referenceId;
         this.amount = amount;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public PaymentMode getPaymentMode() {

@@ -3,8 +3,7 @@ package com.scaler.parkingLot.models;
 
 import java.util.List;
 
-public class Bill {
-    private int id;
+public class Bill extends BaseModel{
     private double amount;
     private long exitTime;
     private List<Payment> payments;
@@ -12,22 +11,13 @@ public class Bill {
     private Gate gate;
     private BillStatus status;
 
-    public Bill(int id, double amount, long exitTime, List<Payment> payments, Operator operator, Gate gate, BillStatus status) {
-        this.id = id;
+    public Bill(double amount, long exitTime, List<Payment> payments, Operator operator, Gate gate, BillStatus status) {
         this.amount = amount;
         this.exitTime = exitTime;
         this.payments = payments;
         this.operator = operator;
         this.gate = gate;
         this.status = status;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public double getAmount() {
